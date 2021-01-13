@@ -1,4 +1,8 @@
-classdef charac %(name,at,lvl,RB,W,DB,tw_handed)
+%this class generates objects which are the "characters" in all later
+%applicatoins the contain all info about a special character, which
+%either have to be entered or generated from class_info.mat
+
+classdef charac %needed input arguments for methods (name,at,lvl,RB,W,DB,tw_handed,cn) = (Charactername,Attributelist,Level,Armorbonus,Weapon dice [a b],DAmagebonus,twohanded y/n,classname)
     properties
         %properties wich have to be assigned by input arguments and are
         %"constructed"
@@ -6,7 +10,7 @@ classdef charac %(name,at,lvl,RB,W,DB,tw_handed)
         at  % St De Co Wi In Ch
         lvl 
         RB  % all except dex
-        W %weapon dice dice
+        W %weapon dicce, array of form [numebr of dice  kind of dice] e.g. [1 8] = 1d8
         DB%damage bonus, except strength
         AB%attack bonus, except GAB and strength
         two_handed %1 if yes, 0 if no

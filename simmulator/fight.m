@@ -1,9 +1,8 @@
 function res = fight(C1,C2,n)
     W = waitbar(0.5,'setting up..');
     W.Position = [-600  450  270.0000   56.2500];
-    n_f = n;% round(n_f_list(m));
-    res = zeros(n_f,6); %winC1 HP1 winC2 HP2 draws rounds
-    R_list = ones(n_f,1);%save rounds played till death
+    n_f = n;% number of iterations
+    res = zeros(n_f,6); %saved results: winC1 remainingHP1 winC2 remainingHP2 draws rounds
     for n = 1:1:n_f
         waitbar(n/n_f,W,'Fighting');
     %initialize

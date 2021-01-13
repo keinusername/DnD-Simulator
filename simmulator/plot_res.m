@@ -1,5 +1,6 @@
 function fig_res = plot_res(C1,C2,res)
     fig_res = figure;
+    %plot win statistics
     ax_WL = subplot(2,3,[1,3]);
     res_W_count  = sum(res(:,[1 3 5]),1); % sum of absulte win numbers
     res_r = res_W_count ./ length(res(:,1)); %relative winrates
@@ -12,6 +13,7 @@ function fig_res = plot_res(C1,C2,res)
     ax_WL.YLim = [0 1];
     ax_WL.YTickLabel = {0 25 50 75 100};
 
+    %plot healt at the end of each fight statistics
     mean_HP = mean(res(:,[2 4]),1);
     std_HP = std(res(:,[2 4]),ones(length(res(:,1)),1),1);
 
@@ -35,7 +37,7 @@ function fig_res = plot_res(C1,C2,res)
     linkaxes([ax_HP_1,ax_HP_2],'y');
     linkaxes([ax_HP_1,ax_HP_2],'x');
 
-
+    %plot rounds fought statistics
     mean_R = mean(res(:,6));
     std_R = std(res(:,6));
 

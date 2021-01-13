@@ -174,9 +174,6 @@ ax_HP_2.YTick = [];
 ax_HP_2.Title.String = 'Remaining HP Player 2';
 ax_HP_2.Legend;
 
-
-
-
 ax_R = uiaxes(grid);
 ax_R.Layout.Row = [11 20];
 ax_R.Layout.Column = [38 45];
@@ -195,7 +192,9 @@ btn_F.Layout.Column = [7 11];
 btn_F.BackgroundColor = [0.8500 0.3250 0.0980];
 btn_F.ButtonPushedFcn = @(btn,event) ui_fight(btn_F,ax_WL,ax_HP_1,ax_HP_2,ax_R);
 
-%% Attributes
+%% set up input boxes for attriburtes Attributes
+% leave this hear because if its moved in the script it might srew up the
+% indexing at other places....
 %player 1
 A1 = uitextarea(grid,'Value','Attributes');
 A1.Layout.Row = 2;

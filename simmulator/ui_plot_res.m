@@ -1,3 +1,5 @@
+% addpted plot_res for GUI, axes etc. are already set up in GUI so only the
+% plotting needs to be done
 function fig_res = plot_res(C1,C2,ax_WL,ax_HP_1,ax_HP_2,ax_R,res)
     
     W = waitbar(0,'Plotting..');

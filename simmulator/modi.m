@@ -1,4 +1,4 @@
-%input: attributs; output: modifiers
+%generates a list of 6 modifiers from a list of 6 attributes
 function mods = modi(ats);
     mods = zeros(1,6);
     mod_list = -5:1:10;

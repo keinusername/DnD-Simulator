@@ -1,3 +1,5 @@
+%start fight funciton with right chars and plot the results, is activeted
+%by button in GUI
 function ui_fight(btn_F,ax_WL,ax_HP_1,ax_HP_2,ax_R)
     chars = load('chars.mat');
     C1 = chars.C1;
